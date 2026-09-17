@@ -5,6 +5,7 @@ import { Great_Vibes } from "next/font/google";
 import { useTranslations } from "next-intl";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Language from "./Language";
 
 const greatVibes = Great_Vibes({
   weight: ["400"],
@@ -23,7 +24,11 @@ const Introduction = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-12 px-4">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-16 px-4">
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 md:top-6">
+        <Language />
+      </div>
+
       <video
         autoPlay
         loop
@@ -38,12 +43,12 @@ const Introduction = () => {
 
       <div
         data-aos="fade-up"
-        className="relative z-10 flex flex-col items-center justify-center text-center max-w-md md:max-w-xl w-full p-8 text-primary"
+        className="relative z-10 flex flex-col items-center justify-center text-center w-full p-8 text-primary space-y-10 md:space-y-16"
       >
         <p
           data-aos="fade-down"
           data-aos-delay="200"
-          className="text-xl md:text-4xl font-bold text-primary mb-6 leading-relaxed"
+          className="text-xl md:text-5xl font-bold text-primary leading-relaxed"
         >
           {t("twoHeartsOneLove")}
         </p>
@@ -51,40 +56,42 @@ const Introduction = () => {
         <div
           data-aos="zoom-in"
           data-aos-delay="300"
-          className="w-16 md:w-24 h-px bg-primary opacity-60 my-2"
+          className="w-16 md:w-24 h-px bg-primary opacity-60"
         />
 
         <div
           data-aos="zoom-in"
           data-aos-delay="400"
-          className={`${greatVibes.className} my-6 space-y-2 md:space-y-4 text-secondary`}
+          className={`${greatVibes.className} space-y-6 md:space-y-12 text-secondary`}
         >
           <h1 className="text-4xl md:text-6xl tracking-wide">Rozhin Diyar</h1>
-          <span className="text-3xl md:text-5xl block my-1 font-serif">&</span>
+          <span className="text-3xl md:text-5xl block font-serif">&</span>
           <h1 className="text-4xl md:text-6xl tracking-wide">Saman Sherko</h1>
         </div>
 
         <div
           data-aos="zoom-in"
           data-aos-delay="500"
-          className="w-16 md:w-24 h-px bg-primary opacity-60 my-2"
+          className="w-16 md:w-24 h-px bg-primary opacity-60"
         />
 
-        <p
-          data-aos="fade-up"
-          data-aos-delay="600"
-          className="text-xl md:text-4xl mt-6 text-primary tracking-widest font-semibold"
-        >
-          {t("dateNumerals")}
-        </p>
+        <div className="space-y-6 md:space-y-10">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="text-xl md:text-5xl text-primary tracking-widest font-semibold"
+          >
+            {t("dateNumerals")}
+          </p>
 
-        <p
-          data-aos="fade-up"
-          data-aos-delay="700"
-          className="text-xl md:text-4xl mt-4 text-primary"
-        >
-          {t("dayOfWeek")}
-        </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="700"
+            className="text-xl md:text-5xl text-primary"
+          >
+            {t("dayOfWeek")}
+          </p>
+        </div>
       </div>
     </section>
   );

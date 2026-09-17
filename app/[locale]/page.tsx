@@ -15,7 +15,7 @@ const Page = () => {
   const [isVideoFinished, setIsVideoFinished] = useState(false);
 
   return (
-    <main className="min-h-screen space-y-20 relative">
+    <main className="min-h-screen space-y-32 relative">
       {!isVideoFinished ? (
         <IntroVideo onComplete={() => setIsVideoFinished(true)} />
       ) : (

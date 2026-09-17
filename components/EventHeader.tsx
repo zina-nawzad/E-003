@@ -30,10 +30,10 @@ export const EventHeader = ({
       data-aos="fade-down"
       data-aos-duration="800"
     >
-      <h2 className="text-3xl md:text-5xl font-bold text-primary mb-3">
+      <h2 className="text-3xl md:text-5xl font-bold text-primary mb-5">
         {t(titleKey)}
       </h2>
-      <p className="text-lg md:text-2xl text-primary mb-8 font-medium">
+      <p className="text-lg md:text-4xl text-primary mb-8 font-medium">
         {t(subtitleKey)}
       </p>
     </div>

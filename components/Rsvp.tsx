@@ -108,7 +108,7 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
         )}
 
         <div className="space-y-4" data-aos="fade-up" data-aos-delay="200">
-          <label className="block text-end font-bold text-sm md:text-3xl text-primary">
+          <label className="block text-end font-bold text-sm md:text-3xl text-primary mb-6 mt-8">
             {t("predictCoupleOutfitTitle")}
           </label>
           <div className="grid grid-cols-2 gap-4">
@@ -118,15 +118,13 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
                 <div
                   key={option.id}
                   onClick={() => actions.setSelectedOutfit(option.id)}
-                  data-aos="zoom-in"
-                  data-aos-delay={250 + index * 50}
-                  className={`p-2 border rounded-xl cursor-pointer transition-all duration-200 flex items-center justify-center gap-2 ${
+                  className={`p-2 border rounded-xl transition-all duration-200 flex items-center justify-center gap-2 ${
                     isSelected
                       ? "bg-primary border-primary shadow-md"
                       : "border-[#E2CCA8] bg-transparent"
                   }`}
                 >
-                  <div className="relative w-1/2 h-16 md:h-36">
+                  <div className="relative w-1/2 h-16 md:h-42">
                     <Image
                       src={option.woman}
                       alt="Woman Outfit"
@@ -134,7 +132,7 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
                       className="object-contain"
                     />
                   </div>
-                  <div className="relative w-1/2 h-16 md:h-36">
+                  <div className="relative w-1/2 h-16 md:h-42">
                     <Image
                       src={option.man}
                       alt="Man Outfit"
@@ -158,11 +156,7 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
           />
         </div>
 
-        <div
-          className="grid grid-cols-2 gap-4 pt-4"
-          data-aos="fade-up"
-          data-aos-delay="350"
-        >
+        <div className="grid grid-cols-2 gap-4 pt-4">
           <Button type="button">
             <span>{t("guestsConfirmed")}</span>
             <span>({state.confirmedCount})</span>

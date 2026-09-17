@@ -192,7 +192,7 @@ function CarouselControlGroup({
 function CarouselPrevious({
   className,
   variant = "ghost",
-  size = "icon-sm",
+  size = "icon-lg",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -220,7 +220,7 @@ function CarouselPrevious({
 function CarouselNext({
   className,
   variant = "ghost",
-  size = "icon-sm",
+  size = "icon-lg",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();

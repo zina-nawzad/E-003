@@ -7,7 +7,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-background text-base py-6 rounded-md",
+        default: "bg-primary text-background text-base md:text-xl py-6 rounded-md",
         outline:
           "border-border bg-background  aria-expanded:bg-muted aria-expanded:text-foreground ",
         secondary:

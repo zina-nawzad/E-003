@@ -55,7 +55,7 @@ const Location = ({
             />
           </div>
 
-          <Button className="absolute bottom-0 inset-x-0 w-full z-40 bg-primary/90  text-white text-lg sm:text-xl md:text-2xl py-3 md:py-6 rounded-none transition-colors duration-300">
+          <Button className="absolute bottom-0 inset-x-0 w-full z-40 bg-primary/90 text-background text-lg md:text-3xl py-3 md:py-10 rounded-none transition-colors duration-300">
             {t("openInMaps")}
           </Button>
         </a>

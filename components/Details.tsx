@@ -66,7 +66,7 @@ const Details = () => {
             top: `${(activeIndex / (timelineData.length - 1)) * 85 + 7}%`,
           }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-10 md:h-10 pointer-events-none"
+          className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 w-12 h-12 md:w-28 md:h-28 pointer-events-none"
         >
           <Image
             src={item}
@@ -92,11 +92,11 @@ const Details = () => {
                 }`}
               >
                 <div
-                  className={`w-[45%] flex flex-col items-center  text-center space-y-2 ${
+                  className={`w-[45%] flex flex-col items-center  text-center space-y-6 ${
                     isLeft ? "pr-2" : "pl-2"
                   }`}
                 >
-                  <div className="relative w-28 h-28 md:w-36 md:h-36 ">
+                  <div className="relative w-28 h-28 md:w-52 md:h-52 ">
                     <Image
                       src={node.image}
                       alt={node.id}
@@ -105,15 +105,15 @@ const Details = () => {
                     />
                   </div>
 
-                  <span className="text-xl md:text-2xl text-primary">
+                  <span className="text-xl md:text-4xl text-primary">
                     {t(node.time)}
                   </span>
 
-                  <h3 className="text-lg md:text-xl font-bold text-secondary">
+                  <h3 className="text-lg md:text-4xl font-bold text-secondary">
                     {t(node.titleKey)}
                   </h3>
 
-                  <p className="text-sm md:text-base text-primary leading-relaxed max-w-xs">
+                  <p className="text-sm md:text-3xl text-primary leading-relaxed max-w-xs">
                     {t(node.descKey)}
                   </p>
                 </div>
