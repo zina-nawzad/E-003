@@ -40,7 +40,7 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
   }, []);
 
   return (
-    <div className="w-full mx-auto space-y-12 text-center text-primary px-12">
+    <div className="w-full mx-auto space-y-12 text-center text-primary px-4">
       <form
         onSubmit={actions.handleSubmit}
         className="space-y-6 text-left bg-transparent py-6 px-4 md:py-8"
