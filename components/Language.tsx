@@ -10,6 +10,7 @@ export const Language = () => {
   const currentLocale = useLocale();
 
   const languages = [
+    { label: "En", value: "en" },
     { label: "Ar", value: "ar" },
     { label: "Ku", value: "ku" },
   ];

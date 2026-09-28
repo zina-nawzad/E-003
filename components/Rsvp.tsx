@@ -43,7 +43,7 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
     <div className="w-full mx-auto space-y-12 text-center text-primary px-4">
       <form
         onSubmit={actions.handleSubmit}
-        className="space-y-6 text-left bg-transparent py-6 px-4 md:py-8"
+        className="space-y-6 text-left bg-transparent py-6 md:py-8 lg:max-w-4xl lg:mx-auto"
         data-aos="fade-up"
       >
         <EventHeader titleKey={"rsvpTitle"} subtitleKey={"rsvpSubtitle"} />
@@ -108,11 +108,11 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
         )}
 
         <div className="space-y-4" data-aos="fade-up" data-aos-delay="200">
-          <label className="block text-end font-bold text-sm md:text-3xl text-primary mb-6 mt-8">
+          <label className="block text-start font-bold text-sm md:text-3xl text-primary mb-6 mt-8">
             {t("predictCoupleOutfitTitle")}
           </label>
           <div className="grid grid-cols-2 gap-4">
-            {OUTFIT_OPTIONS.map((option, index) => {
+            {OUTFIT_OPTIONS.map((option) => {
               const isSelected = state.selectedOutfit === option.id;
               return (
                 <div
@@ -178,13 +178,16 @@ export default function Rsvp({ id }: InteractiveRsvpProps) {
         </h3>
 
         {state.hasMounted && state.wishes.length > 0 ? (
-          <div className="px-4 relative">
-            <Carousel key={state.wishes.length} className="w-full">
+          <div className="relative">
+            <Carousel
+              key={state.wishes.length}
+              className="w-full lg:max-w-4xl lg:mx-auto"
+            >
               <CarouselContent>
                 {state.wishes.map((w: GuestDoc) => (
-                  <CarouselItem key={w.id} className="basis-full">
+                  <CarouselItem key={w.id} className="basis-full ">
                     <div className="bg-primary text-white rounded-sm shadow-md space-y-4 min-h-30 flex flex-col justify-between mx-1 p-4">
-                      <div className="flex flex-col justify-between items-end w-full">
+                      <div className="flex flex-col justify-between items-start w-full">
                         <span className="text-xs md:text-xl mb-2">
                           {w.attendance ? (
                             <>

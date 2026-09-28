@@ -24,7 +24,7 @@ const Introduction = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-16 px-4">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden py-16 px-4 lg:max-w-4xl lg:mx-auto">
       <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 md:top-6">
         <Language />
       </div>

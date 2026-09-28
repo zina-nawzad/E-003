@@ -14,7 +14,7 @@ export default function RsvpStatsBoard({
   const t = useTranslations();
 
   return (
-    <div className="space-y-6 mt-4">
+    <div className="space-y-6 mt-4 ">
       <div className="grid grid-cols-2 gap-6">
         {OUTFIT_OPTIONS.map((opt) => {
           const percentage = getPercentageForOutfit(opt.id);
